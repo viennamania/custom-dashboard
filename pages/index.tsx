@@ -93,22 +93,7 @@ Argument of type 'ContractWithMetadata[]' is not assignable to parameter of type
       {/* Content */}
       <div className={styles.container}>
         {/* Top Section */}
-        <h1 className={styles.h1}>thirdweb Custom Dashboard</h1>
-        <p className={styles.explain}>
-          Learn how to dynamically create smart contracts using the thirdweb SDK
-          and view all of the contracts you&apos;ve created, similar to our{" "}
-          <b>
-            <a
-              href="https://thirdweb.com/dashboard"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.purple}
-            >
-              dashboard
-            </a>
-          </b>
-          .
-        </p>
+        <h1 className={styles.h1}>GRANDERBY Dashboard</h1>
 
         <hr className={styles.divider} />
 
