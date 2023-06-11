@@ -76,7 +76,10 @@ export default function Deploy() {
             <p>
               <b>Connect Your Wallet to deploy a contract</b>
             </p>
-            <ConnectWallet accentColor="#F213A4" />
+            <ConnectWallet
+              
+              //accentColor="#F213A4"
+            />
           </>
         ) : (
           <>
@@ -88,7 +91,9 @@ export default function Deploy() {
                   onClick={() => deployContract(c as ContractType)}
                 >
                   <div className={styles.contractImage}>
+                    
                     <img src={imageMapping[c as ContractType]} alt={c} />
+
                   </div>
                   <b className={styles.cardName}>
                     {nameMapping[c as ContractType]}
