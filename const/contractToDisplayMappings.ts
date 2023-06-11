@@ -12,6 +12,7 @@ const contractTypeToDisplayNameMapping = {
   custom: "Custom",
   multiwrap: "Multiwrap",
   "signature-drop": "Signature Drop",
+  "marketplace-v3": "Marketplace",
 };
 
 const contractTypeToImageMapping = {
