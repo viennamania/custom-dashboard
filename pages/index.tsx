@@ -13,8 +13,10 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
+
   const router = useRouter();
   const address = useAddress();
+
   const sdk = useSDK();
 
   const [loading, setLoading] = useState(true);
@@ -37,6 +39,13 @@ const Home: NextPage = () => {
 >([]);
 
 /*
+getContractList(walletAddress: string): Promise<{
+  address: string;
+  contractType: "custom" | "edition-drop" | "edition" | "marketplace" | "multiwrap" | "nft-collection" | "nft-drop" | "pack" | "signature-drop" | "split" | "token-drop" | "token" | "vote";
+  metadata: () => Promise<any>;
+}[]>;
+*/
+/*
 Argument of type 'ContractWithMetadata[]' is not assignable to parameter of type 'SetStateAction<{ address: string; contractType: "custom" | "edition-drop" | "edition" | "marketplace" | "marketplace-v3" | "multiwrap" | "nft-collection" | "nft-drop" | "pack" | "signature-drop" | "split" | "token-drop" | "token" | "vote"; }[]>'.
   Type 'ContractWithMetadata[]' is not assignable to type '{ address: string; contractType: "custom" | "edition-drop" | "edition" | "marketplace" | "marketplace-v3" | "multiwrap" | "nft-collection" | "nft-drop" | "pack" | "signature-drop" | "split" | "token-drop" | "token" | "vote"; }[]'.
     Type 'ContractWithMetadata' is not assignable to type '{ address: string; contractType: "custom" | "edition-drop" | "edition" | "marketplace" | "marketplace-v3" | "multiwrap" | "nft-collection" | "nft-drop" | "pack" | "signature-drop" | "split" | "token-drop" | "token" | "vote"; }'.
@@ -52,7 +61,10 @@ Argument of type 'ContractWithMetadata[]' is not assignable to parameter of type
       return;
     }
 
+    console.log("address", address);
+
     // Fetch the contracts for this address and set them in state
+    /*
     sdk
       .getContractList(address)
       .then((contracts) => {
@@ -63,6 +75,17 @@ Argument of type 'ContractWithMetadata[]' is not assignable to parameter of type
 
       })
       .finally(() => setLoading(false));
+    */
+
+      const main = async () => {
+
+        const contracts = await sdk.getContractList(address); 
+
+        console.log("contracts", contracts);
+      }
+
+      main();
+
   }, [address, sdk]);
 
   return (
