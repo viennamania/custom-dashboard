@@ -10,7 +10,7 @@ const activeChainId = ChainId.Mumbai;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebProvider desiredChainId={activeChainId}>
+    <ThirdwebProvider activeChain={activeChainId}>
       <Head>
         <title>thirdweb Custom Dashboard Example</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

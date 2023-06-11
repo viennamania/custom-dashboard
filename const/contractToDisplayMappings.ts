@@ -29,6 +29,7 @@ const contractTypeToImageMapping = {
   pack: `icons/pack.webp`,
   multiwrap: `icons/general.webp`,
   custom: `icons/custom.svg`,
+  "marketplace-v3": `icons/marketplace.webp`,
 };
 
 // Here's a list of contracts that you can deploy.
@@ -45,6 +46,7 @@ const contractsToShowOnDeploy = [
   "nft-drop",
   // "multi-wrap",
   // "signature-drop",
+  "marketplace-v3",
 ];
 
 export {
