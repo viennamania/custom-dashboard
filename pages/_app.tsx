@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider activeChain={activeChainId}>
       <Head>
-        <title>thirdweb Custom Dashboard Example</title>
+        <title>GRANDERBY Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
